@@ -11,7 +11,6 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QComboBox>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QLabel>
@@ -39,9 +38,9 @@ public:
     QLCDNumber *worldSecondLCD;
     QLabel *Map;
     QTableView *ToDoList;
-    QComboBox *TimeZoneBox;
     QPushButton *MapLoadButton;
     QLineEdit *AreaCodeLine;
+    QLabel *label;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -105,15 +104,15 @@ public:
         ToDoList->setSizeAdjustPolicy(QAbstractScrollArea::AdjustIgnored);
         ToDoList->horizontalHeader()->setDefaultSectionSize(250);
         ToDoList->verticalHeader()->setVisible(false);
-        TimeZoneBox = new QComboBox(centralwidget);
-        TimeZoneBox->setObjectName(QString::fromUtf8("TimeZoneBox"));
-        TimeZoneBox->setGeometry(QRect(420, 20, 241, 22));
         MapLoadButton = new QPushButton(centralwidget);
         MapLoadButton->setObjectName(QString::fromUtf8("MapLoadButton"));
         MapLoadButton->setGeometry(QRect(360, 140, 111, 61));
         AreaCodeLine = new QLineEdit(centralwidget);
         AreaCodeLine->setObjectName(QString::fromUtf8("AreaCodeLine"));
         AreaCodeLine->setGeometry(QRect(500, 150, 141, 41));
+        label = new QLabel(centralwidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(410, 20, 191, 31));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -136,6 +135,7 @@ public:
         Map->setText(QCoreApplication::translate("MainWindow", "Image Label", nullptr));
         MapLoadButton->setText(QCoreApplication::translate("MainWindow", "Map Download", nullptr));
         AreaCodeLine->setText(QCoreApplication::translate("MainWindow", "98119", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "Switzerland Time", nullptr));
     } // retranslateUi
 
 };

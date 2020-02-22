@@ -4,7 +4,8 @@
 #include <httpmanager.h>
 #include <QMainWindow>
 #include <QTimer>
-#include <QTimeZone>
+#include <QDateTime>
+#include <QTime>
 #include <QByteArray>
 #include <QList>
 #include <QFile>
@@ -22,17 +23,19 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    void UplaodCSV();
 
 private slots:
     void on_MapLoadButton_clicked();
     void processImage(QPixmap *);
+    void setSwitzerlandTime();
 
 
 private:
     Ui::MainWindow *ui;
     HTTPManager *httpManager;
     QStandardItemModel *csvModel;
+    void UplaodCSV();
+    QTimer *timer;
 
 };
 #endif // MAINWINDOW_H

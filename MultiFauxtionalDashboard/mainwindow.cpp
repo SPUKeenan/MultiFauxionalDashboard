@@ -4,13 +4,21 @@
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
-    httpManager(new HTTPManager)
+    httpManager(new HTTPManager),
+    timer(new QTimer)
 {
     ui->setupUi(this);
 
     connect(httpManager, SIGNAL(ReadyImage(QPixmap *)),
             this, SLOT(processImage(QPixmap *)));
+
     MainWindow::UplaodCSV();
+
+    connect(timer, SIGNAL(timeout()),
+            this, SLOT(setSwitzerlandTime()));
+
+    setSwitzerlandTime();
+    timer->start(1000);
 
 }
 
@@ -49,7 +57,18 @@ void MainWindow::UplaodCSV()
        }
 }
 
-//map url: https://dev.virtualearth.net/REST/V1/Imagery/Map/AerialWithLabels/78745/7?mapSize=400,200&mapLayer=TrafficFlow&format=png&key=AlhMfHseh1iO8LpHUYvv125wMpone0D2EuwVEgTXjxxPEy_RzL_EPZ033zvOD1yw
+void MainWindow::setSwitzerlandTime()
+{
+    QTime time = QTime::currentTime();
+    time = time.addSecs(32400);
+    QString hour = time.toString("hh");
+    QString minute = time.toString("mm");
+    QString second = time.toString("ss");
+
+    ui->worldHourLCD->display(hour);
+    ui->worldMinuteLCD->display(minute);
+    ui->worldSecondLCD->display(second);
+}
 
 void MainWindow::on_MapLoadButton_clicked()
 {

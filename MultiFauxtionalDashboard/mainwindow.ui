@@ -192,16 +192,6 @@
      <bool>false</bool>
     </attribute>
    </widget>
-   <widget class="QComboBox" name="TimeZoneBox">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>20</y>
-      <width>241</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QPushButton" name="MapLoadButton">
     <property name="geometry">
      <rect>
@@ -226,6 +216,19 @@
     </property>
     <property name="text">
      <string>98119</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>20</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Switzerland Time</string>
     </property>
    </widget>
   </widget>
