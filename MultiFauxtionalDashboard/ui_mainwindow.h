@@ -99,7 +99,12 @@ public:
         Map->setGeometry(QRect(360, 220, 281, 211));
         ToDoList = new QTableView(centralwidget);
         ToDoList->setObjectName(QString::fromUtf8("ToDoList"));
-        ToDoList->setGeometry(QRect(760, 20, 256, 192));
+        ToDoList->setGeometry(QRect(760, 20, 256, 201));
+        ToDoList->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
+        ToDoList->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        ToDoList->setSizeAdjustPolicy(QAbstractScrollArea::AdjustIgnored);
+        ToDoList->horizontalHeader()->setDefaultSectionSize(250);
+        ToDoList->verticalHeader()->setVisible(false);
         TimeZoneBox = new QComboBox(centralwidget);
         TimeZoneBox->setObjectName(QString::fromUtf8("TimeZoneBox"));
         TimeZoneBox->setGeometry(QRect(420, 20, 241, 22));

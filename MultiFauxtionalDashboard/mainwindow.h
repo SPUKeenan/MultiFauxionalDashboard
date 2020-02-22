@@ -7,6 +7,9 @@
 #include <QTimeZone>
 #include <QByteArray>
 #include <QList>
+#include <QFile>
+#include <QTextStream>
+#include <QStandardItemModel>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -19,6 +22,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void UplaodCSV();
 
 private slots:
     void on_MapLoadButton_clicked();
@@ -28,6 +32,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     HTTPManager *httpManager;
+    QStandardItemModel *csvModel;
 
 };
 #endif // MAINWINDOW_H

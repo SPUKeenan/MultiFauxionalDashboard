@@ -746,6 +746,11 @@ moc_mainwindow.cpp: mainwindow.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtCore/qtimezone.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtCore/QByteArray \
 		C:/Qt/5.14.1/mingw73_64/include/QtCore/QList \
+		C:/Qt/5.14.1/mingw73_64/include/QtCore/QFile \
+		C:/Qt/5.14.1/mingw73_64/include/QtCore/QTextStream \
+		C:/Qt/5.14.1/mingw73_64/include/QtGui/QStandardItemModel \
+		C:/Qt/5.14.1/mingw73_64/include/QtGui/qstandarditemmodel.h \
+		C:/Qt/5.14.1/mingw73_64/include/QtCore/qabstractitemmodel.h \
 		moc_predefs.h \
 		C:/Qt/5.14.1/mingw73_64/bin/moc.exe
 	C:\Qt\5.14.1\mingw73_64\bin\moc.exe $(DEFINES) --include C:/Users/kjlro/Documents/Github/MultiFauxionalDashboard/MultiFauxtionalDashboard/moc_predefs.h -IC:/Qt/5.14.1/mingw73_64/mkspecs/win32-g++ -IC:/Users/kjlro/Documents/Github/MultiFauxionalDashboard/MultiFauxtionalDashboard -IC:/Qt/5.14.1/mingw73_64/include -IC:/Qt/5.14.1/mingw73_64/include/QtWidgets -IC:/Qt/5.14.1/mingw73_64/include/QtGui -IC:/Qt/5.14.1/mingw73_64/include/QtANGLE -IC:/Qt/5.14.1/mingw73_64/include/QtNetwork -IC:/Qt/5.14.1/mingw73_64/include/QtCore -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include mainwindow.h -o moc_mainwindow.cpp
@@ -1039,6 +1044,11 @@ main.o: main.cpp mainwindow.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtCore/qtimezone.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtCore/QByteArray \
 		C:/Qt/5.14.1/mingw73_64/include/QtCore/QList \
+		C:/Qt/5.14.1/mingw73_64/include/QtCore/QFile \
+		C:/Qt/5.14.1/mingw73_64/include/QtCore/QTextStream \
+		C:/Qt/5.14.1/mingw73_64/include/QtGui/QStandardItemModel \
+		C:/Qt/5.14.1/mingw73_64/include/QtGui/qstandarditemmodel.h \
+		C:/Qt/5.14.1/mingw73_64/include/QtCore/qabstractitemmodel.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/QApplication \
 		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qapplication.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtCore/qcoreapplication.h \
@@ -1194,6 +1204,11 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtCore/qtimezone.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtCore/QByteArray \
 		C:/Qt/5.14.1/mingw73_64/include/QtCore/QList \
+		C:/Qt/5.14.1/mingw73_64/include/QtCore/QFile \
+		C:/Qt/5.14.1/mingw73_64/include/QtCore/QTextStream \
+		C:/Qt/5.14.1/mingw73_64/include/QtGui/QStandardItemModel \
+		C:/Qt/5.14.1/mingw73_64/include/QtGui/qstandarditemmodel.h \
+		C:/Qt/5.14.1/mingw73_64/include/QtCore/qabstractitemmodel.h \
 		ui_mainwindow.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/QApplication \
 		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qapplication.h \
@@ -1215,7 +1230,6 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qtabbar.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qrubberband.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtCore/qabstractitemmodel.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/QHeaderView \
 		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qheaderview.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qabstractitemview.h \

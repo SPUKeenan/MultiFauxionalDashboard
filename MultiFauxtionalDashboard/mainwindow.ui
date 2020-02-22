@@ -173,9 +173,24 @@
       <x>760</x>
       <y>20</y>
       <width>256</width>
-      <height>192</height>
+      <height>201</height>
      </rect>
     </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOn</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustIgnored</enum>
+    </property>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>250</number>
+    </attribute>
+    <attribute name="verticalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
    </widget>
    <widget class="QComboBox" name="TimeZoneBox">
     <property name="geometry">
