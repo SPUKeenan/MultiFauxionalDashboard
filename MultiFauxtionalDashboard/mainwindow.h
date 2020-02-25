@@ -1,7 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-
 #include <httpmanager.h>
 #include <QMainWindow>
 #include <QTimer>
@@ -26,7 +25,6 @@ public:
     ~MainWindow();
 
 private slots:
-
     void on_MapLoadButton_clicked();
     void processImage(QPixmap *);
     void setSwitzerlandTime();
@@ -39,14 +37,5 @@ private:
     void UplaodCSV();
     QTimer *timer;
 
-
-    void on_page1_clicked();
-
-    void on_page2_clicked();
-
-    void on_page3_clicked();
-
-private:
-    Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H
