@@ -13,3 +13,18 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+void MainWindow::on_page1_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+void MainWindow::on_page2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
+void MainWindow::on_page3_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
