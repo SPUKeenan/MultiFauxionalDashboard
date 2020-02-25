@@ -1,7 +1,16 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <httpmanager.h>
 #include <QMainWindow>
+#include <QTimer>
+#include <QDateTime>
+#include <QTime>
+#include <QByteArray>
+#include <QList>
+#include <QFile>
+#include <QTextStream>
+#include <QStandardItemModel>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,13 +25,17 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_page1_clicked();
+    void on_MapLoadButton_clicked();
+    void processImage(QPixmap *);
+    void setSwitzerlandTime();
 
-    void on_page2_clicked();
-
-    void on_page3_clicked();
 
 private:
     Ui::MainWindow *ui;
+    HTTPManager *httpManager;
+    QStandardItemModel *csvModel;
+    void UplaodCSV();
+    QTimer *timer;
+
 };
 #endif // MAINWINDOW_H

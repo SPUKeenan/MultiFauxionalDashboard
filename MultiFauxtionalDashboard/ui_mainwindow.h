@@ -14,8 +14,10 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTableView>
 #include <QtWidgets/QWidget>
@@ -36,6 +38,9 @@ public:
     QLCDNumber *worldSecondLCD;
     QLabel *Map;
     QTableView *ToDoList;
+    QPushButton *MapLoadButton;
+    QLineEdit *AreaCodeLine;
+    QLabel *label;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -90,14 +95,28 @@ public:
         worldSecondLCD->setProperty("value", QVariant(22.000000000000000));
         Map = new QLabel(centralwidget);
         Map->setObjectName(QString::fromUtf8("Map"));
-        Map->setGeometry(QRect(360, 100, 301, 231));
+        Map->setGeometry(QRect(360, 220, 281, 211));
         ToDoList = new QTableView(centralwidget);
         ToDoList->setObjectName(QString::fromUtf8("ToDoList"));
-        ToDoList->setGeometry(QRect(760, 20, 256, 192));
+        ToDoList->setGeometry(QRect(760, 20, 256, 201));
+        ToDoList->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
+        ToDoList->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        ToDoList->setSizeAdjustPolicy(QAbstractScrollArea::AdjustIgnored);
+        ToDoList->horizontalHeader()->setDefaultSectionSize(250);
+        ToDoList->verticalHeader()->setVisible(false);
+        MapLoadButton = new QPushButton(centralwidget);
+        MapLoadButton->setObjectName(QString::fromUtf8("MapLoadButton"));
+        MapLoadButton->setGeometry(QRect(360, 140, 111, 61));
+        AreaCodeLine = new QLineEdit(centralwidget);
+        AreaCodeLine->setObjectName(QString::fromUtf8("AreaCodeLine"));
+        AreaCodeLine->setGeometry(QRect(500, 150, 141, 41));
+        label = new QLabel(centralwidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(410, 20, 191, 31));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1024, 21));
+        menubar->setGeometry(QRect(0, 0, 1024, 22));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -110,10 +129,13 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
-        imageDownload->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        Weather->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        Map->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        imageDownload->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        Weather->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        Map->setText(QCoreApplication::translate("MainWindow", "Image Label", nullptr));
+        MapLoadButton->setText(QCoreApplication::translate("MainWindow", "Map Download", nullptr));
+        AreaCodeLine->setText(QCoreApplication::translate("MainWindow", "98119", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "Switzerland Time", nullptr));
     } // retranslateUi
 
 };

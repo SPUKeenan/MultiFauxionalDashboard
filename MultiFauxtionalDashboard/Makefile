@@ -724,6 +724,8 @@ check: first
 
 benchmark: first
 
+compiler_no_pch_compiler_make_all:
+compiler_no_pch_compiler_clean:
 compiler_rcc_make_all:
 compiler_rcc_clean:
 compiler_moc_predefs_make_all: moc_predefs.h
