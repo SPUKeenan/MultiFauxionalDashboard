@@ -1,9 +1,17 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <httpmanager.h>
 #include <QMainWindow>
 #include <QTimer>
+#include <QDateTime>
 #include <QTime>
+#include <QByteArray>
+#include <QList>
+#include <QFile>
+#include <QTextStream>
+#include <QStandardItemModel>
+#include <QGraphicsDropShadowEffect>
 
 #include "httpmanager.h"
 
@@ -30,12 +38,18 @@ private slots:
     void setCurrentTime();
     void processWeatherJson(QJsonObject *json);
     void on_weatherDownloadButton_clicked();
+
+    void on_MapLoadButton_clicked();
+    void processImage(QPixmap *);
+    void setSwitzerlandTime();
 private:
     Ui::MainWindow *ui;
     int  photoIterator = 1;
    QTimer *timer;
    HTTPManager *httpManager;
    int imageNumber = 0;
+    QStandardItemModel *csvModel;
+    void UplaodCSV();
 };
 
 
